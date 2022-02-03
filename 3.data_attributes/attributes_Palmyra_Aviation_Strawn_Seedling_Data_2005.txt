@@ -1,0 +1,22 @@
+attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
+sp		categorical				
+date		Date		!Add datetime specifier here!		
+day_number		Date		!Add datetime specifier here!		
+sample		numeric	!Add units here!			
+island		categorical				
+plot		numeric	!Add units here!			
+tx		categorical				
+px		numeric	!Add units here!			
+hx1		numeric	!Add units here!			
+dx1		numeric	!Add units here!			
+ux1		numeric	!Add units here!			
+lx1		numeric	!Add units here!			
+damage_type1		categorical				
+damage_type2		categorical				
+dv1		numeric	!Add units here!			
+dv2		numeric	!Add units here!			
+damage_total		numeric	!Add units here!			
+damage_difference		numeric	!Add units here!			
+leaf_difference		numeric	!Add units here!			
+height_difference		numeric	!Add units here!			
+notes		categorical				

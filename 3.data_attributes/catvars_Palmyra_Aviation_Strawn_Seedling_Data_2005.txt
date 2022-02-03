@@ -1,0 +1,28 @@
+attributeName	code	definition
+damage_type1	dead	
+damage_type1	lm1	
+damage_type1	lm2	
+damage_type1	lm3	
+damage_type1	lm4	
+damage_type1	no damage	
+damage_type1	no leaves	
+damage_type1	stem broken	
+damage_type1	uprooted	
+damage_type2	stem broken	
+damage_type2	NA	
+island	aviation island	
+island	strawn island	
+notes	1.0	
+notes	2.0	
+notes	3.0	
+notes	rat got into cage	
+notes	NA	
+sp	CONU	
+sp	COSU	
+sp	PIGR	
+sp	SCSE	
+sp	TECA	
+sp	TOAR	
+tx	CLOSED	
+tx	OPEN	
+tx	PARTIAL	

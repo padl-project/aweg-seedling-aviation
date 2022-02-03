@@ -79,9 +79,13 @@ str(aviation_clean)
 
 ```
 
+CHECK complete() and make sure no NAs introduced
+
+
+
 ## Save
 ```{r}
-write_csv(aviation_clean, here::here("7.clean_data/Palmyra_Aviation_Strawn, Seedling_Data_2005.csv"))
+write_csv(aviation_clean, here::here("7.clean_data/Palmyra_Aviation_Strawn_Seedling_Data_2005.csv"))
 
 ```
 
