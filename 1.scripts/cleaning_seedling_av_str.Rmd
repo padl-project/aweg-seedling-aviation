@@ -16,6 +16,7 @@ library(tidyverse)
 library(janitor)
 library(readxl)
 library(freeR)
+library(lubridate)
 
 ## Sets R not to use scientific notations
 options(scipen=999) 
@@ -51,7 +52,7 @@ unique(aviation_raw$sp)
 unique(aviation_raw$island)
 unique(aviation_raw$tx)
 unique(aviation_raw$hx1) ## replace * with NA 
-unique(aviation_raw$dx1)## does * mean something different than NA? only 6 NA variables
+unique(aviation_raw$dx1)## does * mean something different than NA? only 1 NA variables
 unique(aviation_raw$ux1) ## does * mean something different than NA? only 6 NA variables
 unique(aviation_raw$lx1) ## Replace * with NA
 unique(aviation_raw$damage_type1)
@@ -71,21 +72,29 @@ unique(aviation_raw$notes)
 aviation_clean <- aviation_raw %>% 
   mutate(across(9:20, ~replace(., . == "*", NA)),
          across(9:12, ~as.numeric(.)),
-         across(18:20, ~as.numeric(.))) %>% 
+         across(18:20, ~as.numeric(.)),
+         date = date(date)) %>% 
   select(-x22)
 
 ## Check
 str(aviation_clean)
 
+
+complete(aviation_clean)
+count_na(aviation_raw)
+
+##Checked! NAs in clean data match number of * in Raw data. Only question is if * and NA is the same in variables dx1 and ux1
+
+
 ```
 
-CHECK complete() and make sure no NAs introduced
+CHECK complete() and make sure no NAs introduced --> Checked!
 
 
 
 ## Save
 ```{r}
-write_csv(aviation_clean, here::here("7.clean_data/Palmyra_Aviation_Strawn_Seedling_Data_2005.csv"))
+write_csv(aviation_clean, here::here("7.clean_data/palmyra_aviation_strawn_seedling_data_2005.csv"))
 
 ```
 
